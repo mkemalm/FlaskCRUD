@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script src="static/addlic.js"></script>
+<div class="maintitle" id="addlicdiv">Add License</div>
+
+<form action="" method="post">
+    <table align="center">
+        <tr>
+            <td class="form_right">
+                {{form.liclabel.label}}
+            </td>
+            <td class="form_left">
+                {{form.liclabel(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.licprice.label}}
+            </td>
+            <td class="form_left">
+                {{form.licprice(size=30)}}
+                {{form.liccurrency}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.licnumber.label}}
+            </td>
+            <td class="form_left">
+                {{form.licnumber(size=30)}}
+                {{form.licmodel}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.licstart.label}}
+            </td>
+            <td class="form_left">
+                {{form.licstart(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.licend.label}}
+            </td>
+            <td class="form_left">
+                {{form.licend(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.liccrno.label}}
+            </td>
+            <td class="form_left">
+                {{form.liccrno(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                {{form.submitlic()}}
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
+
+body {
+    background-color: whitesmoke;
+}
+  
+.maintitle {
+    color: #57aae1;
+    align-content: center;
+    font-family: Heebo;
+    font-size: x-large;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.warningdiv {
+    color: red;
+    align-content: center;
+    font-family: Heebo;
+    font-size: large;
+    text-align: center;
+    margin-top: 5px;
+    height: 20px;
+}
+
+.menu {
+    font-family: Roboto;
+    font-size: medium;
+    display: inline-block;
+    padding: 5px;
+    color: #57aae1;
+}
+
+table,tr,td,th {
+    font-family: Roboto;
+    font-size: small;
+}
+
+.form_right {
+    text-align: right;
+}
+
+.form_left {
+    text-align: left;
+}

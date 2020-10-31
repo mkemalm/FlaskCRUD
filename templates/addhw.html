@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script src="static/addhw.js"></script>
+<div class="maintitle" id="addhwdiv">Add Hardware</div>
+
+<form action="" method="post">
+    <table align="center">
+        <tr>
+            <td class="form_right">
+                {{form.serialno.label}}
+            </td>
+            <td class="form_left">
+                {{form.serialno(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.hwmodel.label}}
+            </td>
+            <td class="form_left">
+                {{form.hwmodel(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.hwtype.label}}
+            </td>
+            <td class="form_left">
+                {{form.hwtype(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.hwlabel.label}}
+            </td>
+            <td class="form_left">
+                {{form.hwlabel(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.price.label}}
+            </td>
+            <td class="form_left">
+                {{form.price(size=30)}}
+                {{form.currency}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.warrantystart.label}}
+            </td>
+            <td class="form_left">
+                {{form.warrantystart(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.warrantyend.label}}
+            </td>
+            <td class="form_left">
+                {{form.warrantyend(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.hwcrno.label}}
+            </td>
+            <td class="form_left">
+                {{form.hwcrno(size=30)}}
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                {{form.submithw()}}
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}
