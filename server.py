@@ -1,6 +1,6 @@
 from flask import Flask,render_template,redirect,request
-from addhw import AddHwForm
-from addlic import AddLicForm
+from view.addhw import AddHwForm 
+from view.addlic import AddLicForm
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'thecodex'
