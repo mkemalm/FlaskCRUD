@@ -1,8 +1,8 @@
 from flask import Flask,render_template,redirect,request,url_for
 from models.hardware import Hardware
 from flask_sqlalchemy import SQLAlchemy
-from view.addhw import AddHwForm 
-from view.addlic import AddLicForm
+from views.addhw import AddHwForm 
+from views.addlic import AddLicForm
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'thecodex'
