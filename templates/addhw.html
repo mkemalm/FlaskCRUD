@@ -4,8 +4,7 @@
 
 <script src="static/addhw.js"></script>
 <div class="maintitle" id="addhwdiv">Add Hardware</div>
-
-<form action="" method="post">
+<form action="" method="post" action="/addhw">
     <table align="center">
         <tr>
             <td class="form_right">
@@ -75,7 +74,8 @@
         <tr>
             <td></td>
             <td>
-                {{form.submithw()}}
+                {{form.hwsubmit()}}
+                <button id="clear">Clear</button>
             </td>
             <td></td>
         </tr>

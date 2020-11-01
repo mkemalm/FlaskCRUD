@@ -7,10 +7,11 @@ $(function () {
 });
 
 $(document).ready(function () {
-    $("#submithw").click(function (e) {
+   $("#hwsubmit").click(function (e) {
         if(!$.isNumeric($("#price").val())) {
             $('.warningdiv').text('Enter a valid price!');
             e.preventDefault(e);
         }
     });
+    
 });

@@ -9,7 +9,7 @@ class AddHwForm(FlaskForm):
     price = StringField("Price")
     curchoices = [('TRY','TRY'),('USD','USD'),('EUR','EUR')]
     currency = SelectField("Currency", choices=curchoices)
-    warrantystart = DateField("Warranty Start")
-    warrantyend = DateField("Warranty End")
+    warrantystart = DateField("Warranty Start",format="%m/%d/%Y")
+    warrantyend = DateField("Warranty End",format="%m/%d/%Y")
     hwcrno = StringField("Contract Number")
-    submithw = SubmitField("Add Hardware")
+    hwsubmit = SubmitField("Add Hardware")
