@@ -6,10 +6,10 @@ class AddLicForm(FlaskForm):
     licprice = StringField("Unit Price")
     curchoices = [('TRY','TRY'),('USD','USD'),('EUR','EUR')]
     liccurrency = SelectField("Currency", choices=curchoices)
-    licnumber = StringField("License Number")
+    liccount = StringField("License Count")
     basechoices = [('CPUCore','CPU Core'),('CPUSocket','CPU Socket'),('Client','Client'),('Node','Node')]
     licmodel = SelectField("License Model", choices=basechoices)
-    licstart = DateField("License Start")
-    licend = DateField("License End")
+    licstart = DateField("License Start",format="%m/%d/%Y")
+    licend = DateField("License End",format="%m/%d/%Y")
     liccrno = StringField("Contract Number")
     submitlic = SubmitField("Add License")

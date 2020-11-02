@@ -12,8 +12,8 @@ $(document).ready(function () {
             $('.warningdiv').text('Enter a valid price!');
             e.preventDefault(e);
         }
-        if(!$.isNumeric($("#licnumber").val())) {
-            $('.warningdiv').text('Enter a valid number!');
+        if(!$.isNumeric($("#liccount").val())) {
+            $('.warningdiv').text('Enter a valid count!');
             e.preventDefault(e);
         }
     });
