@@ -1,4 +1,4 @@
-from models.hardware import Hardware
+from model.hardware import Hardware
 from flask_sqlalchemy import SQLAlchemy
 from views.addhw import AddHwForm
 

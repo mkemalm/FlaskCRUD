@@ -1,4 +1,4 @@
-from models.license import License
+from model.license import License
 from flask_sqlalchemy import SQLAlchemy
 from views.addlic import AddLicForm
 

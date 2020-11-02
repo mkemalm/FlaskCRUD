@@ -1,10 +1,10 @@
 from flask import Flask,render_template,redirect,request,url_for
-from models.hardware import Hardware
+from model.hardware import Hardware
 from flask_sqlalchemy import SQLAlchemy
 from views.addhw import AddHwForm 
 from views.addlic import AddLicForm
-from models.crudhardware import CrudHardware
-from models.crudlicense import CrudLicense
+from model.crudhardware import CrudHardware
+from model.crudlicense import CrudLicense
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'thecodex'
