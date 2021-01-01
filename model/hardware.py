@@ -12,10 +12,12 @@ class Hardware(db.Model):
     price = db.Column(db.Numeric, unique=False, nullable=True)
     currency = db.Column(db.String(10), unique=False, nullable=True)
     contract_number = db.Column(db.String(10), unique=False, nullable=True)
+    vendor = db.Column(db.String(30), unique=False, nullable=True)
+    supplier = db.Column(db.String(30), unique=False, nullable=True)
     warranty_start = db.Column(db.Date, unique=False, nullable=True)
     warranty_end = db.Column(db.Date, unique=False, nullable=True)
-
-    def __init__(self, serial_number, hardware_label, hardware_model,hardware_type,price,currency,contract_number,warranty_start,warranty_end):
+    
+    def __init__(self, serial_number, hardware_label, hardware_model,hardware_type,price,currency,contract_number,warranty_start,warranty_end,vendor,supplier):
         self.serial_number = serial_number
         self.hardware_label = hardware_label
         self.hardware_model = hardware_model
@@ -25,6 +27,8 @@ class Hardware(db.Model):
         self.contract_number = contract_number
         self.warranty_start = warranty_start
         self.warranty_end = warranty_end
+        self.vendor = vendor
+        self.supplier = supplier
 
     def __repr__(self):
         return f"<hardware {self.name}>"

@@ -3,6 +3,7 @@ from model.hardware import Hardware
 from flask_sqlalchemy import SQLAlchemy
 from views.addhw import AddHwForm 
 from views.addlic import AddLicForm
+from views.search import SearchForm
 from model.crudhardware import CrudHardware
 from model.crudlicense import CrudLicense
 
@@ -40,6 +41,18 @@ def addlic():
         return render_template('addlic.html', form=addlicForm, msg='License exists.')
     else:
         return render_template('addlic.html', form=addlicForm, msg=' ')
+
+@app.route('/search',methods=['GET','POST'])
+def search():
+    searchForm = SearchForm()
+    if searchForm.validate_on_submit and request.method == 'POST':
+        search_type = request.form.get("searchtype")
+        if  search_type == "Hardware":
+            hwresult = CrudHardware.searchHardware(searchForm, db)
+            print(len(hwresult))
+            print(hwresult[0].serial_number)
+            return render_template('search.html',form=searchForm, msg=' ', results=hwresult)
+    return render_template('search.html',form=searchForm, msg=' ')
 
 if __name__ == '__main__':
     app.run(debug=True)

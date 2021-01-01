@@ -46,3 +46,17 @@ table,tr,td,th {
 .form_left {
     text-align: left;
 }
+
+.result {
+    text-align: left;
+}
+
+.result_table {
+    font-family: Roboto;
+    font-size: small;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+}

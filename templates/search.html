@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<script src="static/addhw.js"></script>
+<div class="maintitle" id="searchdiv">Search</div>
+<form action="" method="post">
+    <table align="center">
+        <tr>
+            <td class="form_right">
+                {{form.searchlabel.label}}
+            </td>
+            <td class="form_left">
+                {{form.searchlabel(size=50)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.searchvendor.label}}
+            </td>
+            <td class="form_left">
+                {{form.searchvendor(size=50)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.searchsupplier.label}}
+            </td>
+            <td class="form_left">
+                {{form.searchsupplier(size=50)}}
+            </td>
+        </tr>
+        <tr>
+            <td class="form_right">
+                {{form.searchtype.label}}
+            </td>
+            <td class="form_left">
+                {{form.searchtype()}}
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="form_left">
+                {{form.searchsubmit()}}
+            </td>
+        </tr>
+
+{% if results %}
+<table align="center" class="result_table">
+{% for result in results %}
+<tr>
+    <td class="result_table">
+        {{result.serial_number}}
+    </td>
+    <td class="result_table">
+        {{result.hardware_label}}
+    </td>
+</tr>
+{% endfor %}
+</table>
+{% endif %}
+
+{% endblock %}
